@@ -34,28 +34,6 @@ const useStyles = makeStyles((theme) => ({
     width: '96%',
     marginLeft: '3%',
   },
-  parts: {
-      height: '100%',
-      margin: '0 0 0 0'
-  },
-  parts1: {
-    margin: '0vh 0 0 0vw'
-  },
-  rounded: {
-    color: 'grey',
-    backgroundColor: 'grey',
-    width: '18.5vw',
-    height: '18.5vw',
-    margin: '0 0 2vh 3.4vw'
-  },
-  button: {
-    border: '2px solid #33065B', boxSizing: 'border-box', borderRadius: '10px',
-    margin: '0 0 0 3.4vw',
-    height: '6vh',
-    width: '18vw',
-    fontSize: '1.3vw',
-    textTransform: 'capitalize',
-  },
   iconButton: {
     '&:hover': {
       color: 'white',
@@ -78,13 +56,6 @@ const useStyles = makeStyles((theme) => ({
     height: '10%',
     //border:'1px solid white',
     margin: '-0.5vh 0 0 3vw',
-  },
-  h: {
-      margin: '0 0 0 0.8vw',
-      fontSize: '1vw'
-  },
-  input: {
-    display: 'none'
   },
   inputStyle: {
     fontStyle: 'italic',
@@ -115,67 +86,7 @@ const useStyles = makeStyles((theme) => ({
 export default function App(props) {
   const classes = useStyles();
   const history = useHistory();
-  var imgFile='';
-  var imagePreviewUrl='';
   var text = 'Checker Inbox & Tasks';
-
-  var types=['text', 'password', 'text', 'text'];
-
-  function handleClick_ctg() {
-    history.push("/category");
-  }
-
-  /*function imageHandler(e) {
-    e.preventDefault();
-
-    let reader = new FileReader();
-    let file = e.target.files[0];
-
-    reader.onloadend = () => {
-        console.log(file)
-        //console.log(reader.result)
-    }
-    ReactDOM.render(<div><p>Image</p><img src={reader.result} /></div>, document.getElementById('main'));
-    reader.readAsDataURL(file)
-  } */
-
- /* function getData (){
-    const token = localStorage.getItem("user");
-    axios.get('http://65.0.20.129/auth/users/me/', {
-        headers: {
-            'Authorization': `Token ${token}`
-        }
-    })
-        .then((response) => {
-            var result = response.data;
-            console.log(result);
-            var element = document.getElementById('email');
-            element.value = result.email;
-            var element1 = document.getElementById('firstname');
-            element1.value = result.username;
-
-        }).then(() => {
-          for(var i=0; i<types.length; i++){
-            var division = document.getElementById('first');
-            console.log(division);
-            var element = document.createElement("input");
-            console.log(element);
-            element.type = types[i];
-            element.id = 'input-'+ i;
-            console.log(element.id);
-            element.style.float = "right";
-            element.value = "hello";
-            division.append(element);
-          }
-          
-        })
-        .catch(error=>{
-              console.log(error);
-              alert("Please Enter Valid Username And Password");
-
-
-        }) */
-
 
   return (
     <div className={classes.main}>
@@ -276,7 +187,7 @@ export default function App(props) {
               </Grid>
 
               <Grid item xs={10} >
-                      <Grid style={{margin: '0 0 0 -6vw', background: '#FFFFFF', height:'95%',width: '104%', boxShadow: '-4px -2px 16px rgba(0, 0, 0, 0.05)', borderRadius: '40px'}}>
+                      <Grid style={{margin: '0 0 0 -7.5vw', background: '#FFFFFF', height:'95%',width: '104%', boxShadow: '-4px -2px 16px rgba(0, 0, 0, 0.05)', borderRadius: '40px'}}>
                       {props.content}
                       </Grid>
 
