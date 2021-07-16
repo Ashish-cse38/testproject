@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Checker_inbox from './Checker-inbox';
+import Collection_sheet from './Collection-sheet';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
